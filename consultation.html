@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultation - Ayurveda Bliss</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container-fluid">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="fs-3">Ayurveda Bliss</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="ayurvedic.html">Treatments</a>
+        <a href="herbs.html">Herbs</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container text-center">
+    <h2 class="section-title">Book Your Ayurvedic Consultation</h2>
+    <p>Connect with our certified Ayurvedic doctors for personalized health guidance.</p>
+    <form class="consultation-form" id="consultation-form">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <textarea name="message" placeholder="Brief about your health concern..." rows="5" required></textarea>
+      <button type="submit">Request Consultation</button>
+    </form>
+    <p class="message"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ayurveda Bliss. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("consultation-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.querySelector(".message").textContent = "Thank you for your request. We'll contact you soon.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
